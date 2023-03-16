@@ -5,11 +5,11 @@ import { useEffect } from 'react';
 import { init,subscribeChat } from './SocketApi';
 import { useChat } from '../context/ChatContext';
 function Container() {
-  const {messages,setMessages} = useChat();
+  const {setMessages} = useChat();
     useEffect(() => {
         init()
         subscribeChat((message) => {
-          setMessages((prevState) => [...prevState, {messages:message}])
+          setMessages((prevState) => [...prevState, { messages:message}])
         })
     },[])
   return (
