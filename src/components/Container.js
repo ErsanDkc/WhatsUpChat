@@ -10,8 +10,9 @@ function Container() {
         init()
         subscribeChat((message) => {
           setMessages((prevState) => [...prevState, { messages:message}])
+          
         })
-    },[])
+    },[setMessages])
   return (
     <div className='container'>
         

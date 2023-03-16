@@ -27,16 +27,22 @@
 
 .singleMessage {
   background-color: white;
-  padding: 8px;
+  padding: 12px;
   min-width: 1vw;
   max-width: 96%;
   overflow-wrap: break-word;
   width: fit-content;
-  border-radius: 10px;
+  border-radius: 6px;
   margin-bottom: 6px;
   
   
+  
 }
+.right {
+  margin-left: auto;
+  background-color: rgb(200, 234, 196);
+}
+
 .singleMessage > div {
   display: flex;
   flex-direction: column;

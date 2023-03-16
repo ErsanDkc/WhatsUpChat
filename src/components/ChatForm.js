@@ -7,14 +7,14 @@ function ChatForm() {
 
     const handlesubmit = (e) => {
         e.preventDefault();
-        setMessages([...messages,{messages:message}])
+        setMessages([...messages,{messages:message, fromMe: true}])
         send(message)
         setMessage("")
     }
   return (
     <div>
         <form onSubmit={handlesubmit}>
-            <input className='input' value={message} onChange={(e) => setMessage(e.target.value)}/>
+            <input className='input' value={message} onChange={(e) => setMessage(e.target.value)} />
         </form>
     </div>
   )
